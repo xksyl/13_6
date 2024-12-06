@@ -16,8 +16,8 @@ dp = Dispatcher(bot, storage=MemoryStorage())
 kb = InlineKeyboardMarkup()
 button = InlineKeyboardButton(text= 'Рассчитать норму калорий', callback_data = 'calories')
 button2 = InlineKeyboardButton(text= 'Формулы расчета', callback_data= 'formuls')
-kb.add(button)
-kb.add(button2)
+kb.add(button, button2)
+
 
 
 @dp.message_handler(text = 'Рассчитать')
